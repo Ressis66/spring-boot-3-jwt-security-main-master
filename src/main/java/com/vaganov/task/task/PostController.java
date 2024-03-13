@@ -37,7 +37,7 @@ public class PostController {
   }
   @PreAuthorize("hasAuthority('posts:read') or hasAuthority('admin:read')")
   @GetMapping("/post")
-  public Post getPost(@RequestParam Integer id) throws JsonProcessingException {
+  public Post getPost(@PathVariable Integer id) throws JsonProcessingException {
     return postService.getPost(id);
   }
 

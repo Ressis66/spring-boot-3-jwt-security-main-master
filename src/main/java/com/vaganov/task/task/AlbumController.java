@@ -37,7 +37,7 @@ public class AlbumController {
   }
   @PreAuthorize("hasAuthority('albums:read') or hasAuthority('admin:read')")
   @GetMapping("/album/{id}")
-  public Album getAlbum(@RequestParam Integer id) throws JsonProcessingException {
+  public Album getAlbum(@PathVariable Integer id) throws JsonProcessingException {
     return albumService.getAlbum(id);
   }
 
