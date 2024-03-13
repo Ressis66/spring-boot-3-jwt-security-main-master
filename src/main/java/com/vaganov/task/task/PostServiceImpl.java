@@ -37,7 +37,7 @@ public class PostServiceImpl implements PostService {
   }
   @Cacheable("posts")
   public Post newPost (PostRequest newTask) throws JsonProcessingException {
-    String url = "https://jsonplaceholder.typicode.com/posts/";
+    String url = "https://jsonplaceholder.typicode.com/posts";
     RestTemplate restTemplate = new RestTemplate();
     HttpEntity<PostRequest> request = new HttpEntity<>(newTask);
     Post post= restTemplate.postForObject(url, request, Post.class);
