@@ -40,8 +40,6 @@ Swagger: http://localhost:8080/swagger-ui/index.html
 To test project you can use the following endpoints:
 (Bearer tokens are printed on the program console)
 
-Registration:
-
 TASK (need to use TASK or ADMIN tokens)
 
 GET http://localhost:8080/api/v1/tasks/tasks
