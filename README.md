@@ -38,7 +38,7 @@ ADMIN is for access to all directories. Other are for access to specific ones.
 Swagger: http://localhost:8080/swagger-ui/index.html
 
 To test project you can use the following endpoints:
-(Bearer tokens are printed on the program console)
+(Bearer tokens are printed on the console)
 
 TASK (need to use TASK or ADMIN tokens)
 
