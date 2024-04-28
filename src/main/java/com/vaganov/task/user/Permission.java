@@ -14,14 +14,10 @@ public enum Permission {
     ADMIN_UPDATE("admin:update"),
     ADMIN_CREATE("admin:create"),
     ADMIN_DELETE("admin:delete"),
-    ALBUMS_READ("albums:read"),
-    ALBUMS_UPDATE("albums:update"),
-    ALBUMS_DELETE("albums:delete"),
-    ALBUMS_CREATE("albums:create"),
-    POSTS_READ("posts:read"),
-    POSTS_UPDATE("posts:update"),
-    POSTS_DELETE("posts:delete"),
-    POSTS_CREATE("posts:create")
+    TASKS_READ("tasks:read"),
+    TASKS_UPDATE("tasks:update"),
+    TASKS_DELETE("tasks:delete"),
+    TASKS_CREATE("tasks:create"),
     ;
 
     @Getter

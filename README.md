@@ -1,6 +1,5 @@
 # Spring Boot 3.0 Security with JWT Implementation
-This project redirects requests to  https://jsonplaceholder.typicode.com/ 
-using Spring Boot 3.0 and JSON Web Tokens (JWT). It includes the following features:
+This project uses Spring Boot 3.0 and JSON Web Tokens (JWT). It includes the following features:
 
 ## Features
 * User registration and login with JWT authentication
@@ -37,64 +36,35 @@ The examples of tokens could be taken from Spring CLI. There ara 4 token type in
 ADMIN is for access to all directories. Other are for access to specific ones.
 
 To test project you can use the following endpoints:
-USER (need to use USER or ADMIN tokens)
-GET http://localhost:8080/api/v1/users/users
-GET http://localhost:8080/api/v1/users/user/1
-POST http://localhost:8080/api/v1/users/newUser
+(Bearer tokens are printed on the program console)
+
+Registration:
+
+TASK (need to use TASK or ADMIN tokens)
+
+GET http://localhost:8080/api/v1/tasks/tasks
+
+POST http://localhost:8080/api/v1/tasks/task
 {
-"id": 11,
-"name": "Mary Poopins",
-"username": "r44@mail.ru",
-"email": "r44@mail.ru",
-"password": null,
-"address": {
-"street": "Kulas Light",
-"suite": "Apt. 55",
-"city": "Gwenborough",
-"zipcode": "92998-3874",
-"geo": {
-"lat": "-38.3159",
-"lng": "81.1496"
+"id": 1,
+"title": "quidem",
+"description": "111",
+"dueDate": "2019-02-03",
+"completed": true
 }
-},
-"phone": "8-770-736-8031 x56442",
-"website": "gard.org",
-"company": {
-"name": "Crona",
-"catchPhrase": "Multi-layered client-server neural-net",
-"bs": "harness real-time e-markets"
-}
+GET http://localhost:8080/api/v1/tasks/task/1
 
-}
+PUT http://localhost:8080/api/v1/tasks/task/1
 
-DELETE http://localhost:8080/api/v1/users/user/11
-
-ALBUM (need to use ALBUM or ADMIN tokens)
-
-GET http://localhost:8080/api/v1/albums/albums
-
-POST http://localhost:8080/api/v1/albums/newAlbum
 {
-"userId": 1,
-"title": "quidem molestiae enim"
+"id": 1,
+"title": "qudem",
+"description": "111",
+"dueDate": "2013-02-03",
+"completed": true
 }
-GET http://localhost:8080/api/v1/albums/album/101
 
-DELETE http://localhost:8080/api/v1/albums/album/101
-
-POST (need to use POST or ADMIN tokens)
-
-GET http://localhost:8080/api/v1/posts/posts
-
-POST http://localhost:8080/api/v1/posts/newPost
-{
-"userId": 1,
-"title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-"body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
-}
-GET http://localhost:8080/api/v1/posts/post/101
-
-DELETE http://localhost:8080/api/v1/posts/post/101
+DELETE http://localhost:8080/api/v1/tasks/task/1
 
 Application uses Spring Boot actuator:
 Endpoint: http://localhost:8080/actuator

@@ -14,19 +14,11 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.security.web.authentication.logout.LogoutHandler;
 
 
-import static com.vaganov.task.user.Permission.USER_CREATE;
-import static com.vaganov.task.user.Permission.USER_DELETE;
-import static com.vaganov.task.user.Permission.USER_READ;
-import static com.vaganov.task.user.Permission.USER_UPDATE;
+
 import static com.vaganov.task.user.Role.ADMIN;
-import static com.vaganov.task.user.Role.ALBUMS;
-import static com.vaganov.task.user.Role.POSTS;
+import static com.vaganov.task.user.Role.TASKS;
 import static com.vaganov.task.user.Role.USER;
 
-import static org.springframework.http.HttpMethod.DELETE;
-import static org.springframework.http.HttpMethod.GET;
-import static org.springframework.http.HttpMethod.POST;
-import static org.springframework.http.HttpMethod.PUT;
 import static org.springframework.security.config.http.SessionCreationPolicy.STATELESS;
 
 @Configuration
@@ -58,13 +50,8 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests(req ->
                         req.requestMatchers(WHITE_LIST_URL)
                                 .permitAll()
-                                .requestMatchers("/api/v1/posts/**").hasAnyRole(POSTS.name(),ADMIN.name())
-                                .requestMatchers("/api/v1/albums/**").hasAnyRole(ALBUMS.name(),ADMIN.name())
+                                .requestMatchers("/api/v1/tasks/**").hasAnyRole(TASKS.name(),ADMIN.name())
                                 .requestMatchers("/api/v1/users/**").hasAnyRole(USER.name(),ADMIN.name())
-                                /*.requestMatchers(GET, "/api/v1/tasks/**").hasAnyAuthority(USER_READ.name(), EXECUTOR_READ.name())
-                                .requestMatchers(POST, "/api/v1/tasks/**").hasAnyAuthority(USER_CREATE.name())
-                                .requestMatchers(PUT, "/api/v1/tasks/**").hasAnyAuthority(USER_UPDATE.name(), EXECUTOR_UPDATE.name())
-                                .requestMatchers(DELETE, "/api/v1/tasks/**").hasAnyAuthority(USER_DELETE.name())*/
                                 .anyRequest()
                                 .authenticated()
                 )

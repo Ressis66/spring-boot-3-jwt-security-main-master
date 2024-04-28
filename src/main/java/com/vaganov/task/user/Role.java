@@ -14,14 +14,10 @@ import static com.vaganov.task.user.Permission.ADMIN_CREATE;
 import static com.vaganov.task.user.Permission.ADMIN_DELETE;
 import static com.vaganov.task.user.Permission.ADMIN_READ;
 import static com.vaganov.task.user.Permission.ADMIN_UPDATE;
-import static com.vaganov.task.user.Permission.ALBUMS_CREATE;
-import static com.vaganov.task.user.Permission.ALBUMS_DELETE;
-import static com.vaganov.task.user.Permission.ALBUMS_READ;
-import static com.vaganov.task.user.Permission.ALBUMS_UPDATE;
-import static com.vaganov.task.user.Permission.POSTS_CREATE;
-import static com.vaganov.task.user.Permission.POSTS_DELETE;
-import static com.vaganov.task.user.Permission.POSTS_READ;
-import static com.vaganov.task.user.Permission.POSTS_UPDATE;
+import static com.vaganov.task.user.Permission.TASKS_CREATE;
+import static com.vaganov.task.user.Permission.TASKS_DELETE;
+import static com.vaganov.task.user.Permission.TASKS_READ;
+import static com.vaganov.task.user.Permission.TASKS_UPDATE;
 import static com.vaganov.task.user.Permission.USER_CREATE;
 import static com.vaganov.task.user.Permission.USER_DELETE;
 import static com.vaganov.task.user.Permission.USER_READ;
@@ -48,22 +44,15 @@ public enum Role {
               USER_CREATE
           )
   ),
-  ALBUMS(
+  TASKS(
       Set.of(
-          ALBUMS_READ,
-          ALBUMS_UPDATE,
-          ALBUMS_DELETE,
-          ALBUMS_CREATE
+          TASKS_READ,
+          TASKS_UPDATE,
+          TASKS_DELETE,
+          TASKS_CREATE
       )
-  ),
- POSTS(
-     Set.of(
-         POSTS_READ,
-         POSTS_UPDATE,
-         POSTS_DELETE,
-         POSTS_CREATE
-     )
- )
+  )
+
   ;
 
   @Getter

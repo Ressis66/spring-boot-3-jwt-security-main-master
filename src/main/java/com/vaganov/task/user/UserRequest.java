@@ -1,5 +1,4 @@
 package com.vaganov.task.user;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;

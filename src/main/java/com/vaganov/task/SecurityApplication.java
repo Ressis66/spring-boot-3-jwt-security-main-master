@@ -42,23 +42,17 @@ public class SecurityApplication {
 					.build();
 			System.out.println("Admin token: " + service.register(manager).getAccessToken());
 
-			var album = RegisterRequest.builder()
-					.name("Album")
-					.username("Album")
-					.email("album@mail.com")
+			var task = RegisterRequest.builder()
+					.name("Task")
+					.username("Task")
+					.email("task@mail.com")
 					.password("password")
-					.role(Role.ALBUMS)
+					.role(Role.TASKS)
 					.build();
-			System.out.println("Album token: " + service.register(album).getAccessToken());
+			System.out.println("Task token: " + service.register(task).getAccessToken());
 
-			var post = RegisterRequest.builder()
-					.name("Post")
-					.username("Post")
-					.email("post@mail.com")
-					.password("password")
-					.role(Role.POSTS)
-					.build();
-			System.out.println("Post token: " + service.register(post).getAccessToken());
+
+
 		};
 	}
 }
