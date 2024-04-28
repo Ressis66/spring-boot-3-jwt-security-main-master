@@ -35,6 +35,8 @@ To build and run the project, follow these steps:
 The examples of tokens could be taken from Spring CLI. There ara 4 token type in this application: ADMIN, USER, POSTS, ALBUMS.
 ADMIN is for access to all directories. Other are for access to specific ones.
 
+Swagger: http://localhost:8080/swagger-ui/index.html
+
 To test project you can use the following endpoints:
 (Bearer tokens are printed on the program console)
 
